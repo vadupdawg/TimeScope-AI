@@ -1,0 +1,10 @@
+[
+    {
+        "origin": [
+        "https://timetracker-frontend-729479821477.europe-west4.run.app"
+        ],
+        "responseHeader": ["Content-Type"],
+        "method": ["PUT", "GET", "POST", "DELETE"],
+        "maxAgeSeconds": 3600
+    }
+]

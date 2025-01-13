@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+    <script src="config.js"></script>
+    <script src="firebase-init.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TimeScope AI</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>TimeScope AI</h1>
+            <div id="userInfo" style="display: none;" class="user-info">
+                <div class="user-avatar"></div>
+                <span id="userName"></span>
+                <button id="logoutButton">Uitloggen</button>
+            </div>
+        </div>
+
+        <div id="loginPanel">
+            <h2>Login</h2>
+            
+            <!-- Sociale login -->
+            <button id="googleLogin" class="social-login">
+                <img src="assets/google-icon.png" alt="Google" />
+                Login met Google
+            </button>
+            
+            <!-- Email login form -->
+            <form id="emailLoginForm" class="login-form">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Wachtwoord</label>
+                    <input type="password" id="password" required>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+            
+            <!-- Links -->
+            <div class="login-links">
+                <a href="#" id="forgotPassword">Wachtwoord vergeten?</a>
+                <p>Nog geen account? <a href="#" id="registerLink">Registreer op TimeScope AI</a></p>
+            </div>
+        </div>
+        
+        <div id="trackingControls" style="display: none;">
+            <div class="status-panel">
+                <div id="trackingStatus" class="status inactive">
+                    <div class="status-indicator"></div>
+                    <span>Tracking inactief</span>
+                </div>
+                <button id="startTracking">Start Tijdregistratie</button>
+                <button id="stopTracking" style="display: none;">Stop Tijdregistratie</button>
+            </div>
+
+            <div id="lastActivity"></div>
+
+            <div class="settings-panel">
+                <h3>Instellingen</h3>
+                <div class="settings-row">
+                    <label for="captureInterval">Capture interval (minuten):</label>
+                    <input type="number" id="captureInterval" min="1" max="60" value="5">
+                </div>
+                <div class="settings-row">
+                    <label for="autoStart">Automatisch starten bij opstarten:</label>
+                    <input type="checkbox" id="autoStart">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

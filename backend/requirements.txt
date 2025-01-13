@@ -1,0 +1,8 @@
+flask
+flask-cors
+gunicorn
+google-cloud-logging
+google-cloud-firestore
+firebase-admin
+langchain-anthropic
+langchain
