@@ -14,7 +14,7 @@
         "productName": "TimeScope AI",
         "publish": {
             "provider": "github",
-            "owner": "jouw-username",
+            "owner": "GroeimetAi",
             "repo": "timescope-ai",
             "private": true,
             "token": "GITHUB_TOKEN"
